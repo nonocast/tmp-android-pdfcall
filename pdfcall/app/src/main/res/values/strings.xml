@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">hello</string>
+    <string name="file1"><u>一、关于第四届中国（上海）国际技术进出口交易会筹备情况的汇报</u></string>
+    <string name="file2"><u>二、关于制定《关于推进供给侧结构性改革 促进工业稳增长调结构促转型的实施意见》情况的汇报</u></string>
+    <string name="file3"><u>三、关于本市加强农村帮扶工作的汇报</u></string>
+    <string name="file4"><u>四、关于《上海市实施〈中华人民共和国残疾人保障法〉办法（修订草案）》的审查报告</u></string>
+    <string name="file5"><u>五、关于本市集中开展安全生产大检查情况的汇报</u></string>
+    <string name="file6"><u>六、关于《上海市交通管理办法（草案）》实施方案</u></string>
 </resources>

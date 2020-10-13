@@ -4,27 +4,295 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:onClick="onClick"
-        android:text="Button"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="154px"
+        android:background="#9A0000"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="114px"
+            android:layout_height="106px"
+            android:layout_marginStart="40px"
+            android:layout_marginTop="24px"
+            android:layout_marginBottom="24px"
+            android:src="@drawable/image"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24px"
+            android:text="市政府第666次常务会议"
+            android:textColor="#FFFFFF"
+            android:textSize="48px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:fontFamily="@font/kaiti"
+            android:text="10月12日（星期一）下午4时"
+            android:textColor="#FFFFFF"
+            android:textSize="28px"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40px"
+        android:layout_marginTop="40px"
+        android:layout_marginEnd="40px"
+        android:layout_marginBottom="40px"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <LinearLayout
+            android:padding="1px"
+            android:background="@drawable/border2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+            <TableLayout
+                android:id="@+id/agendaView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:stretchColumns="1">
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableHeaderCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="类型" />
+                    <TextView
+                        android:background="@drawable/border"
+                        android:layout_height="match_parent"
+                        style="@style/MeetingTableHeaderCellStyle"
+                        android:text="议程" />
+                    <TextView
+                        style="@style/MeetingTableHeaderCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="报告人及列席单位" />
+                    <TextView
+                        style="@style/MeetingTableHeaderCellStyle"
+                        android:background="@drawable/border"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="时间" />
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="汇报" />
+
+                   <TextView
+                       android:id="@+id/file1"
+                       style="@style/MeetingTableCellStyle"
+                       android:layout_height="match_parent"
+                       android:clickable="true"
+                       android:gravity="left"
+                       android:text="@string/file1" />
+                   <TextView
+                        android:gravity="left"
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="汇报人：顾军（10分钟）  出席单位：市商务委、市教委、市财政局、市环卫局" />
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="16:00 - 16:10"/>
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="汇报"/>
+
+                   <TextView
+                       android:id="@+id/file2"
+                       style="@style/MeetingTableCellStyle"
+                       android:layout_height="match_parent"
+                       android:clickable="true"
+                       android:gravity="left"
+                       android:text="@string/file2" />
+                    <TextView
+                        android:gravity="left"
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="汇报人：陈鸣波（10分钟）"/>
+
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="16:10 - 16:20"/>
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="汇报"/>
+
+                   <TextView
+                       android:id="@+id/file3"
+                       style="@style/MeetingTableCellStyle"
+                       android:layout_height="match_parent"
+                       android:gravity="left"
+                       android:text="@string/file3" />
+
+                    <TextView
+                        android:gravity="left"
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="汇报人：孙雷（10分钟）"/>
+
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="16:20 - 16:30"/>
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_span="4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="休息10分钟"/>
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="汇报"/>
+
+                   <TextView
+                       android:id="@+id/file4"
+                       style="@style/MeetingTableCellStyle"
+                       android:layout_height="match_parent"
+                       android:gravity="left"
+                       android:text="@string/file4" />
+
+                    <TextView
+                        android:gravity="left"
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="汇报人：刘华（10分钟）  出席单位：市府法制办、市发改委、市民政局"/>
+
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="16:50 - 17:00 "/>
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="汇报"/>
+
+                   <TextView
+                       android:id="@+id/file5"
+                       style="@style/MeetingTableCellStyle"
+                       android:layout_height="match_parent"
+                       android:gravity="left"
+                       android:text="@string/file5" />
+
+                    <TextView
+                        android:gravity="left"
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="汇报人：齐俊（10分钟）  出席单位：市安监局、市经信委、市商务委、市教委"/>
+
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="17:10 - 17:20 "/>
+                </TableRow>
+
+               <TableRow>
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="179px"
+                        android:layout_height="match_parent"
+                        android:text="汇报"/>
+
+                   <TextView
+                       android:id="@+id/file6"
+                       style="@style/MeetingTableCellStyle"
+                       android:layout_height="match_parent"
+                       android:gravity="left"
+                       android:text="@string/file6" />
+
+                    <TextView
+                        android:gravity="left"
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="488px"
+                        android:layout_height="match_parent"
+                        android:text="汇报人：徐建光（10分钟）  "/>
+
+                    <TextView
+                        style="@style/MeetingTableCellStyle"
+                        android:layout_width="254px"
+                        android:layout_height="match_parent"
+                        android:text="17:20 - 17:30 "/>
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ofd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
